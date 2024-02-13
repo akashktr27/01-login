@@ -17,5 +17,5 @@ REPO_DIRECTORY="/home/ubuntu/01-login"
 ssh -o "StrictHostKeyChecking no" -i "$PRIVATE_KEY_PATH" "$USERNAME@$INSTANCE_IP"
 << EOF
   cd "$REPO_DIRECTORY"
-  git pull origin main  # Change "main" to your branch name if different
+  git pull origin master
 EOF
