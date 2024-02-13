@@ -15,6 +15,10 @@ install:
 # Run tests
 script:
   - echo "Run tests here"
+  - echo $(pwd)
+  - chmod 600 ssh/sacumen-keypair.pem
+  - echo "access added"
+
 
 # Deploy script
 deploy:
