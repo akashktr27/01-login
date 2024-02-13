@@ -1,24 +1,20 @@
-language: python
-python:
-  - "3.8"
+# .travis.yml
+
+# Use Ubuntu 20.04 LTS as the build environment
+os: linux
+dist: focal
 
 # Install dependencies
 install:
-  - pip install -r requirements.txt
-
+  - echo "Installing dependencies here"
 
 # Run tests
-#script:
-#  - python manage.py test
+script:
+  - echo "Run tests here"
 
-# Deployment configuration
+# Deploy script
 deploy:
-  provider: elasticbeanstalk
-  access_key_id: $AWS_ACCESS_KEY_ID
-  secret_access_key: $AWS_SECRET_ACCESS_KEY
-  region: "your-region"  # Specify your AWS region
-  app: "your-app-name"  # Specify your Elastic Beanstalk application name
-  env: "your-env-name"  # Specify your Elastic Beanstalk environment name
-  bucket_name: "your-s3-bucket"  # Specify your S3 bucket name
+  provider: script
+  script: bash deploy.sh
   on:
-    branch: master  # Deployment will be triggered on commits to master branch
+    branch: master
