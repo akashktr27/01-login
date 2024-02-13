@@ -20,6 +20,6 @@ script:
 deploy:
   provider: script
   skip_cleanup: true
-  script: /deploy.sh  # Adjust the path to your script
+  script: /bin/bash script.sh
   on:
     branch: master
