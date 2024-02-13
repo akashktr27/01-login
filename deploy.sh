@@ -9,6 +9,7 @@ USERNAME="ubuntu"
 # Set the public IP address or DNS name of your EC2 instance
 INSTANCE_IP="52.35.169.89"
 
+
 # Set the path to the directory where your git repository is located on the EC2 instance
 REPO_DIRECTORY="/home/ubuntu/01-login"
 
