@@ -13,7 +13,8 @@ INSTANCE_IP="52.35.169.89"
 REPO_DIRECTORY="/home/ubuntu/01-login"
 
 # SSH connection command to perform a git pull
-ssh -o -i "$PRIVATE_KEY_PATH" "$USERNAME@$INSTANCE_IP" << EOF
+ssh -o "StrictHostKeyChecking no" -i "$PRIVATE_KEY_PATH" "$USERNAME@$INSTANCE_IP"
+<< EOF
   cd "$REPO_DIRECTORY"
   git pull origin main  # Change "main" to your branch name if different
 EOF
