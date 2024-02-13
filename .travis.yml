@@ -1,9 +1,13 @@
 # .travis.yml
 
 # Use Ubuntu 20.04 LTS as the build environment
-os: linux
-dist: focal
+#os: linux
+#dist: focal
+language: minimal
 
+branches:
+  only:
+    - main
 # Install dependencies
 install:
   - echo "Installing dependencies here"
@@ -15,8 +19,7 @@ script:
 # Deploy script
 deploy:
   provider: script
-  script:
-    - echo -e "StrictHostKeyChecking no\n" >> ~/.ssh/config
-    - bash deploy.sh
+  skip_cleanup: true
+  script: /deploy.sh  # Adjust the path to your script
   on:
     branch: master
