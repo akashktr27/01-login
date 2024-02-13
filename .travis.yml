@@ -7,7 +7,7 @@ language: minimal
 
 branches:
   only:
-    - main
+    - master
 # Install dependencies
 install:
   - echo "Installing dependencies here"
