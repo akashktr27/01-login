@@ -4,4 +4,4 @@ REPO_DIRECTORY="/home/ubuntu/01-login"
 cd "$REPO_DIRECTORY"
 
 # Execute the git pull command
-git pull origin master
+git reset --hard origin/master
