@@ -1,0 +1,24 @@
+language: python
+python:
+  - "3.8"
+
+# Install dependencies
+install:
+  - pip install -r requirements.txt
+
+
+# Run tests
+#script:
+#  - python manage.py test
+
+# Deployment configuration
+deploy:
+  provider: elasticbeanstalk
+  access_key_id: $AWS_ACCESS_KEY_ID
+  secret_access_key: $AWS_SECRET_ACCESS_KEY
+  region: "your-region"  # Specify your AWS region
+  app: "your-app-name"  # Specify your Elastic Beanstalk application name
+  env: "your-env-name"  # Specify your Elastic Beanstalk environment name
+  bucket_name: "your-s3-bucket"  # Specify your S3 bucket name
+  on:
+    branch: master  # Deployment will be triggered on commits to master branch

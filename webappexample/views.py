@@ -15,11 +15,13 @@ oauth.register(
         "scope": "openid profile email",
     },
     server_metadata_url=f"https://{settings.AUTH0_DOMAIN}/.well-known/openid-configuration",
+    # server_metadata_url=f"https://dev-wg1k0mndsgj12fzq.us.auth0.com/.well-known/openid-configuration",
 )
 
 
-def index(request):
 
+def index(request):
+    print('aaa', settings.AUTH0_DOMAIN)
     return render(
         request,
         "index.html",
