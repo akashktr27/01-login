@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Set the path to your private key file
-PRIVATE_KEY_PATH="/home/ubuntu/01-login/ssh/sacumen-keypair.pem"
+PRIVATE_KEY_PATH="ssh/sacumen-keypair.pem"
 
 # Set the username to connect with (default is "ec2-user" for Amazon Linux instances)
 USERNAME="ubuntu"
