@@ -11,11 +11,13 @@ INSTANCE_IP="52.35.169.89"
 
 
 # Set the path to the directory where your git repository is located on the EC2 instance
-REPO_DIRECTORY="/home/ubuntu/01-login"
+REPO_DIRECTORY="/home/ubuntu/01-login/ssh"
 
 # SSH connection command to perform a git pull
 ssh -o "StrictHostKeyChecking no" -i "$PRIVATE_KEY_PATH" "$USERNAME@$INSTANCE_IP"
 << EOF
-  cd "$REPO_DIRECTORY"
-  git pull origin master
+  cd REPO_DIRECTORY
+  chmod +x git_pull.sh
+  ./git_pull.sh
+  exit
 EOF
