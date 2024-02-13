@@ -15,7 +15,7 @@ SECRET_KEY = "auth0-webappexample-k0n4a#6cqu9=co$_bu^^sd@&^8#*%ukg3z4ku!lj&j)%^@
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['34.209.90.194']
+ALLOWED_HOSTS = ['34.209.90.194', '127.0.0.1', '52.35.169.89']
 
 # Application definition
 

@@ -1,6 +1,6 @@
-SSH_USER="ec2-user"
-SSH_HOST="your-ec2-instance-ip"
-SSH_KEY="path/to/your/private-key.pem"
+SSH_USER="ubuntu"
+SSH_HOST="52.35.169.89"
+SSH_KEY="/home/ubuntu/sacumen-keypair.pem"
 
 # SSH into the EC2 instance and copy your code changes
 ssh -i "$SSH_KEY" "$SSH_USER"@"$SSH_HOST" <<EOF
