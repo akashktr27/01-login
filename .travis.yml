@@ -20,7 +20,6 @@ script:
   - echo "access added"
 
 
-
 # Deploy script
 deploy:
   provider: script
