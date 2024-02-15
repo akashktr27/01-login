@@ -16,6 +16,9 @@ load:
 run:
 	@./manage.py runserver
 
+load:
+	@./manage.py runserver 0.0.0.0:8000
+
 setup: venv active
 
 install: installdjango createproject migrate createuser magic run

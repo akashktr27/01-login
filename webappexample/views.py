@@ -21,7 +21,7 @@ oauth.register(
 
 
 def index(request):
-    print('aaa', settings.AUTH0_DOMAIN)
+    print('auth server', settings.AUTH0_DOMAIN)
     return render(
         request,
         "index.html",
